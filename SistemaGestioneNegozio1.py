@@ -5,12 +5,13 @@ Gestione Clienti:
 I clienti possono visualizzare gli articoli disponibili in inventario.
 I clienti possono selezionare e acquistare articoli dall'inventario.
 Il sistema tiene traccia degli acquisti dei clienti.'''
-
+#creo le variabili:
 controllo = True
 selezione = input("Salve, si desidera visitare il negozio? ")
 lista_prodotti = ["matita", "penna", "foglio", "agenda"]
 acquisti = []
 
+#ciclo if per definire le varie opzioni da effettuare possibili
 if selezione == "sì":
     while controllo == True:
         selezione2 = input("vuoi vedere i prodotti? ")
@@ -24,6 +25,7 @@ if selezione == "sì":
             acquisti2 = input("cosa si intende acquistare?")
             acquisti.append(acquisti2)
         elif selezione3 == "no":
+            #per fermare il ciclo while, nel momento in cui il cliente non vuole più acquistare
             break
         else:
             print("risposta non valida")
