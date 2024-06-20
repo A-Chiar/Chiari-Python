@@ -35,13 +35,14 @@ Scrivi un sistema che prende in input una lista di numeri e
 stampa il quadrato di ciascun numero nella lista.'''
 
 #Definisco gli input
-numero1 = int(input("inserire un numero"))
-numero2 = int(input("inserire un numero"))
-numero3 = int(input("inserire un numero"))
-numero4 = int(input("inserire un numero"))
+lista_numeri= []
+aggiunta1 = int(input("quanti numeri si desidera aggiungere?"))
 
-#creo una lista in cui inserire tutti gli input
-lista_numeri = [numero1, numero2, numero3, numero4]
+for i in range(aggiunta1):
+    aggiunta2=int(input("che numero si desidera aggiungere?"))
+    lista_numeri.append(aggiunta2)
+    
+print(lista_numeri)
 
 #creo il ciclo for che per ogni numero nella lista stampa il quadrato
 for i in lista_numeri:
@@ -49,3 +50,55 @@ for i in lista_numeri:
 
 
 #####
+
+'''Punto 4: Utilizzo di if, while e for insieme 
+Scrivi un sistema che prende in input una lista di numeri interi 
+che precedente è stata valorizzata dall’utente.
+Il sistema deve:
+Utilizzare un ciclo for per trovare il numero massimo nella lista.
+Utilizzare un ciclo while per contare quanti numeri sono presenti nella lista.
+Utilizzare una condizione if per stampare "Lista Vuota" se la lista è vuota,
+altrimenti stampare il numero massimo trovato e il numero di elementi nella lista'''
+
+#inizializzo le variabili necessarie
+lista_numeri= []
+aggiunta1 = int(input("quanti numeri si desidera aggiungere?"))
+
+#creo un ciclo for in modo tale da dare la possibilità all'utente di creare la sua lista
+for i in range(aggiunta1):
+    aggiunta2=int(input("che numero si desidera aggiungere?"))
+    lista_numeri.append(aggiunta2)
+    
+print(lista_numeri)
+
+#creo un ciclo for per trovare il numero massimo
+for i in lista_numeri:
+    lista_numeri.sort()
+print(lista_numeri[-1])
+
+#creo il ciclo while per contare i numeri presenti in lista
+#prima inizializzo le variabili necessarie:
+condizione = True
+conteggio = 0
+#scrivo il ciclo while
+while condizione == True:
+    for i in lista_numeri:
+        conteggio += 1 #aggiungo un contatore
+    print(conteggio)
+    break
+
+#creo la condizione if con tutti i cicli sopra riportati
+if lista_numeri == []:
+    print("Lista Vuota")
+else:
+    for i in lista_numeri:
+        lista_numeri.sort()
+    print("il numero massimo è:") 
+    print(lista_numeri[-1])
+    while condizione == True:
+        for i in lista_numeri:
+            conteggio += 1
+        print("il numero di elementi presenti nella lista è:")
+        print(conteggio)
+        break
+
