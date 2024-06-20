@@ -62,11 +62,11 @@ altrimenti stampare il numero massimo trovato e il numero di elementi nella list
 
 #inizializzo le variabili necessarie
 lista_numeri= []
-aggiunta1 = int(input("quanti numeri si desidera aggiungere?"))
+aggiunta1 = int(input("quanti numeri si desidera aggiungere? "))
 
 #creo un ciclo for in modo tale da dare la possibilità all'utente di creare la sua lista
 for i in range(aggiunta1):
-    aggiunta2=int(input("che numero si desidera aggiungere?"))
+    aggiunta2=int(input("che numero si desidera aggiungere? "))
     lista_numeri.append(aggiunta2)
     
 print(lista_numeri)
