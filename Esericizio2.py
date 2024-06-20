@@ -62,6 +62,7 @@ altrimenti stampare il numero massimo trovato e il numero di elementi nella list
 
 #inizializzo le variabili necessarie
 lista_numeri= []
+#definisco una variabile per permettere all'utente di decidere il numero di elementi da aggiungere
 aggiunta1 = int(input("quanti numeri si desidera aggiungere? "))
 
 #creo un ciclo for in modo tale da dare la possibilità all'utente di creare la sua lista
@@ -88,9 +89,9 @@ while condizione == True:
     break
 
 #creo la condizione if con tutti i cicli sopra riportati
-if lista_numeri == []:
+if lista_numeri == []: #definisco come condizione una lista vuota dettata dalle parentesi quadre
     print("Lista Vuota")
-else:
+else: #nel caso in cui la lista non sia vuota
     for i in lista_numeri:
         lista_numeri.sort()
     print("il numero massimo è:") 
