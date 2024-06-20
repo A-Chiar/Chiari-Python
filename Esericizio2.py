@@ -30,7 +30,7 @@ while condizione == True:
 
 #############
 
-'''TRACCIA Punto 3: Utilizzo di for
+'''Punto 3: Utilizzo di for
 Scrivi un sistema che prende in input una lista di numeri e 
 stampa il quadrato di ciascun numero nella lista.'''
 
