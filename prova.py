@@ -1,12 +1,6 @@
-lista = []
-a =(input("inserire un True o un False"))
-b =(input("inserire un numero intero"))
-c =(input("inserire una stringa"))
+numero = 3
 
-lista.append(a)
-lista.append(b)
-lista.append(c)
-print(lista)
+for i in range(5,1):
+    print(i)
 
-dizionario = {"tipididato": lista}
-print(dizionario)
+
