@@ -11,8 +11,27 @@ class Animale:
             return "garrito"
         else:
             print("animale non presente nello zoo ")
-            continue
         print(f"il {self.nome} fa il verso del {self.fai_suono}")
 
-animale = Animale("gatto", 8)
-print(animale.fai_suono())
+
+class Leone(Animale):
+    def __init__(self, nome, età):
+        Animale.__init__(self, nome, età)
+    
+    def metodo_caccia(self):
+        print("il leone dorme, cacciano le leonesse")
+
+class Giraffa(Animale):
+    def __init__(self, nome, età):
+        Animale.__init__(self, nome, età)
+    
+    def metodo_caccia(self):
+        print("la giraffa caccia le foto sugli alberi")
+
+
+class Pinguino(Animale):
+    def __init__(self, nome, età):
+        Animale.__init__(self, nome, età)
+    
+    def metodo_caccia(self):
+        print("il pinguino caccia i pesci nell'oceano")
