@@ -1,12 +1,12 @@
 class Prodotto():
 
-    def __init__(self, nome, costo_produzione, prezzo_vendita):
+    def __init__(self, nome, costo_produzione, prezzo_vendita): #creare il metodo costruttore 
         self.nome = nome
         self.costo_produzione = costo_produzione
         self.prezzo_vendita = prezzo_vendita
     
-    def calcola_profitto(self):
-        return self.prezzo_vendita-self.costo_produzione
+    def calcola_profitto(self): #metodo calcolo del profitto
+        return self.prezzo_vendita-self.costo_produzione #è corretta come soluzione per calcolare il profitto?
 
     class Elettronica(): ##non so come fare 
         def __init__(self, garanzia):
@@ -33,7 +33,7 @@ class Fabbrica():
         vendita = input("inserire il prodotto venduto ")
         quantità = int(input("inserire la quantità venduta "))
         if vendita in self.inventario:
-            self.inventario[vendita] -= quantità #fare in modo di ottenere una sottrazione tar il prodotto presente e la quantità venduta
+            self.inventario[vendita] -= quantità #funziona ma a che costo? 
             return self.inventario
 
     def resi_prodotto(self):
@@ -44,7 +44,7 @@ class Fabbrica():
             return self.inventario
 
 
-        
+ #controllo che i metodi funzionino
 prodotto = Prodotto("prodotto",3,4)
 fabbrica = Fabbrica()
 print(fabbrica.resi_prodotto())
