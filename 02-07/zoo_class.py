@@ -23,8 +23,8 @@ class Leone(Animale):
 
 class Giraffa(Animale):
     def __init__(self, nome, età):
-        Animale.__init__(self, nome, età)
-    
+        Animale().__init__(self, nome, età)
+        super().fai_suono()
     def metodo_caccia(self):
         print("la giraffa caccia le foto sugli alberi")
 
@@ -32,6 +32,13 @@ class Giraffa(Animale):
 class Pinguino(Animale):
     def __init__(self, nome, età):
         Animale.__init__(self, nome, età)
-    
+        super().fai_suono()
     def metodo_caccia(self):
         print("il pinguino caccia i pesci nell'oceano")
+    def fai_suono(self):
+        return super().fai_suono()
+        
+    
+
+pinguino = Pinguino("pinguino",9)
+print(pinguino.metodo_caccia())
