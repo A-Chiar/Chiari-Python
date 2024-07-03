@@ -20,7 +20,7 @@ class ContoBancario:
             return "l'importo da prelevare supera il saldo"
      
     def get_visualizza_saldo(self):
-        return self.__saldo
+        print(self.__saldo)
 
     def get_titolare(self):
         x = self.__titolare.isalpha()
