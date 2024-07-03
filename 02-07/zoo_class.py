@@ -11,7 +11,7 @@ class Animale:
             return "garrito"
         else:
             print("animale non presente nello zoo ")
-        print(f"il {self.nome} fa il verso del {self.fai_suono}")
+        return f"il {self.nome} fa il verso del {self.fai_suono}"
 
 
 class Leone(Animale):
@@ -20,25 +20,30 @@ class Leone(Animale):
     
     def metodo_caccia(self):
         print("il leone dorme, cacciano le leonesse")
+    def fai_suono(self):  
+        print(super().fai_suono())  ##richiamo con super il metodo della classe padre
 
 class Giraffa(Animale):
     def __init__(self, nome, età):
         Animale().__init__(self, nome, età)
-        super().fai_suono()
     def metodo_caccia(self):
-        print("la giraffa caccia le foto sugli alberi")
-
+        print("la giraffa caccia le foglie sugli alberi")
+    def fai_suono(self):
+        print(super().fai_suono())
 
 class Pinguino(Animale):
     def __init__(self, nome, età):
         Animale.__init__(self, nome, età)
-        super().fai_suono()
     def metodo_caccia(self):
         print("il pinguino caccia i pesci nell'oceano")
     def fai_suono(self):
-        return super().fai_suono()
+        print(super().fai_suono())
         
     
 
 pinguino = Pinguino("pinguino",9)
 print(pinguino.metodo_caccia())
+print(pinguino.fai_suono())
+
+# ho risolto la problematica di ieri ma ora
+# il codice stampa anche due none tra i due output aspettati ma non riesco a capire precisamente dove sia l'errore
