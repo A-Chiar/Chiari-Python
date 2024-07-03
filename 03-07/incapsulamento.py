@@ -22,7 +22,17 @@ class ContoBancario:
     def get_visualizza_saldo(self):
         return self.__saldo
 
-    def get_titolare():
-       self.__titolare.isalpha()
+    def get_titolare(self):
+        x = self.__titolare.isalpha()
+        if x == True:
+            return "il titolare è una stringa non vuota"
+        else:
+            return "il nome del titolare non è valido"
+    
+    def set_titolare(self,nome):
+        nome = "cane"
+        self.__saldo = nome
+        return "nome modificato"
+#non ho ben capito come funziona il metodo set
 conto = ContoBancario()
-print(conto.preleva())
+print(conto.set_titolare())
