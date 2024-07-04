@@ -29,10 +29,10 @@ class ContoBancario:
         else:
             return "il nome del titolare non è valido"
     
-    def set_titolare(self,nome):
-        nome = "cane"
-        self.__saldo = nome
-        return "nome modificato"
+    def get_tit(self):
+        return self.__titolare
+    
+
 #non ho ben capito come funziona il metodo set
 conto = ContoBancario()
 print(conto.set_titolare())
