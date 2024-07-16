@@ -15,6 +15,8 @@ print(daindice5_a15)
 #terzo_elemento = arr[:,2:3] #dà errore in quanto l'array è 1-dimensionale
 
 #print(terzo_elemento)
+terzo_elemento = arr[2:19:3]
+print(terzo_elemento)
 
 arr[5:10] = 99
 print(arr)
